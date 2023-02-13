@@ -9,9 +9,5 @@ mysql -u root -p"$MYSQL_ROOT_PASSWORD" -e "
     CREATE USER '$TELESCOPE_USER'@'%' IDENTIFIED BY '$TELESCOPE_PASSWORD';
     GRANT ALL PRIVILEGES ON $TELESCOPE_DATABASE.* TO '$TELESCOPE_USER'@'%';
 
-    CREATE DATABASE IF NOT EXISTS michman_test;
-    CREATE USER 'michman_test'@'%' IDENTIFIED BY 'password';
-    GRANT ALL PRIVILEGES ON michman_test.* TO 'michman_test'@'%';
-
     FLUSH PRIVILEGES;
 "
